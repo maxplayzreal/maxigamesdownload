@@ -1,0 +1,32 @@
+<title>Download Server</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+    var source = "Files/Sounds/funny.mp3"
+    var audio = document.createElement("audio");
+    var url = "https://google.com"
+    audio.load()
+    audio.src = source
+    audio.volume = 0.5
+    function goTo() {
+        audio.play()
+        const tab = window.open('about:blank', '_blank')
+  const iframe = tab.document.createElement('iframe')
+  const stl = iframe.style
+  stl.border = stl.outline = 'none'
+  stl.width = '100vw'
+  stl.height = '100vh'
+  stl.position = 'fixed'
+  stl.left = stl.right = stl.top = stl.bottom = '0'
+  iframe.src = "download.html"
+  tab.document.body.appendChild(iframe)
+    }
+</script>
+
+<div id="content">
+    <div id="message">
+        <a href=""><div id="link"></div></a>
+        <h1 id="headsup">This is a download server for MaxiGames. Proceed to download a MaxiGames Version?</h1>
+        <button id="proceedbtn" onclick="goTo()">Proceed :3</button>
+    </div>
+</div>
